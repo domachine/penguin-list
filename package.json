@@ -5,13 +5,17 @@
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-scripts": "2.0.5"
+    "react-scripts": "2.0.5",
+    "tachyons": "^4.11.1"
   },
   "scripts": {
     "start": "react-scripts start",
+    "dev": "concurrently -k -s first 'npm start' 'cypress open'",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +25,16 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@storybook/addon-actions": "^4.0.0-rc.0",
+    "@storybook/addon-links": "^4.0.0-rc.0",
+    "@storybook/addons": "^4.0.0-rc.0",
+    "@storybook/react": "^4.0.0-rc.0",
+    "babel-loader": "^8.0.4",
+    "concurrently": "^4.0.1",
+    "cypress": "^3.1.0",
+    "react-test-renderer": "^16.5.2"
+  }
 }
