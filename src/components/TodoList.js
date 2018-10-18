@@ -7,7 +7,7 @@ const TodoList = props => (
       {props.items.map(item => (
         <li key={item.id} className="pa2 mv1 br2 bg-green">
           <div>
-            <input className="mr2" type="checkbox" />
+            <input className="mr2" type="checkbox" checked={false} />
             <span className="near-white">{item.title}</span>
           </div>
         </li>
